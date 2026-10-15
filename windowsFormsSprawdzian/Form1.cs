@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 
 namespace windowsFormsSprawdzian
@@ -26,8 +27,17 @@ namespace windowsFormsSprawdzian
             }
             catch (FormatException)
             {
-                resultLabel.Text = "Proszę wprowadzić poprawną liczbę godzin.";
-
+                if (float.TryParse(hourText.Text, out float hour))
+                {
+                    resultLabel.Text = "Proszę wprowadzić liczbę całkowitą.";
+                } else if (string.IsNullOrWhiteSpace(hourText.Text))
+                {
+                    resultLabel.Text = "Pole nie może być puste.";
+                }
+                else
+                {
+                    resultLabel.Text = "Proszę wprowadzić poprawną liczbę godzin.";
+                }
             }
         }
 

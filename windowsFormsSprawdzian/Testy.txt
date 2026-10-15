@@ -1,0 +1,18 @@
+Test 1:
+- Wprowadzona liczba godzin: 3
+- Oczekiwana kwota: 15z³
+- Rzeczywisty wynik: 15z³
+- Wynik zgodny z oczekiwaniem
+
+Test 2:
+- Wprowadzona liczba godzin: 4
+- Oczekiwana kwota: 19z³
+- Rzeczywisty wynik: 19z³
+- Wynik zgodny z oczekiwaniem
+
+Obs³uga:
+- pustego pola: Pole nie mo¿e byæ puste.
+- abc: Proszê wprowadziæ poprawn¹ liczbê godzin
+- 2,5: Proszê wprowadziæ liczbê ca³kowit¹.
+- 0: Liczba godzin musi byæ w zakresie od 1 do 20.
+- 21: Liczba godzin musi byæ w zakresie od 1 do 20.
