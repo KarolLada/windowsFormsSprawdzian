@@ -23,14 +23,15 @@ namespace windowsFormsSprawdzian
                     return;
                 }
                 int fee = calculateParkingFee(hours);
-                resultLabel.Text = $"Do zapłaty: {fee} zł";
+                resultLabel.Text = "Do zapłaty: " + fee + " zł";
             }
             catch (FormatException)
             {
                 if (float.TryParse(hourText.Text, out float hour))
                 {
                     resultLabel.Text = "Proszę wprowadzić liczbę całkowitą.";
-                } else if (string.IsNullOrWhiteSpace(hourText.Text))
+                } 
+                else if (string.IsNullOrWhiteSpace(hourText.Text))
                 {
                     resultLabel.Text = "Pole nie może być puste.";
                 }
