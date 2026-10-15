@@ -23,12 +23,6 @@ namespace windowsFormsSprawdzian
 
         public int calculateParkingFee(int hours)
         {
-            if (hours < 1 || hours > 20)
-            {
-                MessageBox.Show("Liczba godzin musi być w zakresie od 1 do 20.");
-                return 0;
-            }
-
             int fee = 0;
 
             if (hours <= 3)
