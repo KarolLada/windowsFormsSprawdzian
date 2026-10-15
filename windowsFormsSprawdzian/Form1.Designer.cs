@@ -1,6 +1,6 @@
 ﻿namespace windowsFormsSprawdzian
 {
-    partial class Form1
+    partial class parkingForm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -37,7 +37,7 @@
             // parkingLabel
             // 
             this.parkingLabel.AutoSize = true;
-            this.parkingLabel.Location = new System.Drawing.Point(83, 63);
+            this.parkingLabel.Location = new System.Drawing.Point(33, 35);
             this.parkingLabel.Name = "parkingLabel";
             this.parkingLabel.Size = new System.Drawing.Size(174, 16);
             this.parkingLabel.TabIndex = 0;
@@ -45,40 +45,41 @@
             // 
             // hourText
             // 
-            this.hourText.Location = new System.Drawing.Point(86, 137);
+            this.hourText.Location = new System.Drawing.Point(36, 72);
             this.hourText.Name = "hourText";
             this.hourText.Size = new System.Drawing.Size(106, 22);
             this.hourText.TabIndex = 1;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(88, 210);
+            this.calculateButton.Location = new System.Drawing.Point(36, 114);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(104, 23);
             this.calculateButton.TabIndex = 2;
             this.calculateButton.Text = "Oblicz opłatę";
             this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(318, 137);
+            this.resultLabel.Location = new System.Drawing.Point(33, 166);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(50, 16);
+            this.resultLabel.Size = new System.Drawing.Size(84, 16);
             this.resultLabel.TabIndex = 3;
-            this.resultLabel.Text = "Wynik: ";
+            this.resultLabel.Text = "Do zapłaty: -";
             // 
-            // Form1
+            // parkingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(417, 280);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.hourText);
             this.Controls.Add(this.parkingLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "parkingForm";
+            this.Text = "Opłata za parking";
             this.ResumeLayout(false);
             this.PerformLayout();
 
